@@ -1,19 +1,18 @@
 package store;
 
-import pizza.CheesePizza;
-import pizza.GreekPizza;
-import pizza.PepperoniPizza;
-import pizza.Pizza;
+import pizza.*;
 
 public class NYPizzaStore extends PizzaStore {
     @Override
-    Pizza createPizza(String item) {
+    public Pizza createPizza(String item) {
         if (item.equals("cheese")){
-            return new CheesePizza();
-        } else if (item.equals("greek")) {
-            return new GreekPizza();
-        } else if (item.equals("pepperoni")) {
-            return new PepperoniPizza();
+            return new NYStyleCheesePizza();
+//        } else if (item.equals("pepperoni")) {
+//            return new NYStylePepperoniPizza();
+//        } else if (item.equals("clam")) {
+//            return new NYStyleClamPizza();
+//        } else if (item.equals("veggie")) {
+//            return new NYStyleVeggiePizza();
         } else {
             return null;
         }
